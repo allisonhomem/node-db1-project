@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
           })
 })
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', checkAccountId, (req, res, next) => {
   // DO YOUR MAGIC
 })
 
@@ -20,11 +20,11 @@ router.post('/', checkAccountPayload, (req, res, next) => {
   // DO YOUR MAGIC
 })
 
-router.put('/:id', checkAccountPayload, (req, res, next) => {
+router.put('/:id', checkAccountPayload, checkAccountId, (req, res, next) => {
   // DO YOUR MAGIC
 });
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', checkAccountId, (req, res, next) => {
   // DO YOUR MAGIC
 })
 
